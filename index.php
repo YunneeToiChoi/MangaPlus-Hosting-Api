@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 if(1)
 {
-    // isset($_POST['authKey'])&& ($_POST['authKey']=='abc')
+//    isset($_POST['authKey'])&& ($_POST['authKey']=='abc')
     $stripe = new \Stripe\StripeClient('sk_test_51OsiPhJSl4kaFANTv2e7tiGqrAWMTuwfpotd45nWI6YeCbboGeLAykIfpfv4MycQTuHuXIto5r32SFZxaDgnKEYf00MBzOYfdE'); // secret key
 
 // Use an existing Customer ID if this is a returning customer.
