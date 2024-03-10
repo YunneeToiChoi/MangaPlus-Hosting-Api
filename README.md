@@ -5,3 +5,4 @@ step 3: run ngrok or apatch
 enjoy
 https://dashboard.stripe.com/
 passs 0902250149@
+  android:usesCleartextTraffic="true"
