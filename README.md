@@ -4,3 +4,4 @@ step 2 : set up S stream in php sever , nói chung là để chạy đc host c�
 step 3: run ngrok or apatch
 enjoy
 https://dashboard.stripe.com/
+passs 0902250149@
