@@ -1,8 +1,8 @@
 <?php
 require 'vendor/autoload.php';
-if(1)
+if( isset($_POST['authKey'])&& ($_POST['authKey']=='abc'))
 {
-//    isset($_POST['authKey'])&& ($_POST['authKey']=='abc')
+//
     $stripe = new \Stripe\StripeClient('sk_test_51OsiPhJSl4kaFANTv2e7tiGqrAWMTuwfpotd45nWI6YeCbboGeLAykIfpfv4MycQTuHuXIto5r32SFZxaDgnKEYf00MBzOYfdE'); // secret key
 
 // Use an existing Customer ID if this is a returning customer.
@@ -33,6 +33,10 @@ if(1)
         ],
     ]);
 
+    // Thiết lập phản hồi HTTP trước khi gửi dữ liệu đến trình duyệt
+    http_response_code(200);
+
+    // Gửi dữ liệu JSON đến trình duyệt
     echo json_encode(
         [
             'paymentIntent' => $paymentIntent->client_secret,
@@ -41,8 +45,6 @@ if(1)
             'publishableKey' => 'pk_test_51OsiPhJSl4kaFANTuqY3Tw9yPOIqUMaPwkFbuKvbLjCeQC0njrHdH810sCyqbcK2Im1IZOK9euVvSu8gRjZcCEgE002RvYJJ5h'
         ]
     );
-    http_response_code(200);
-
 }
 else{
     echo "Not authorised";
